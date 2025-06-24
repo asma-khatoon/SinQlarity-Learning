@@ -1,0 +1,17 @@
+.header{
+    background-color: rgb(88, 2, 2);
+    text-align: center;
+    text-decoration-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main{
+background-color:rgb(127, 187, 255);
+text-decoration: none;
+}
+#button{
+    background-color: rgba(4, 4, 90, 0.473);
+}
+.footer{
+    background-color: black;
+}
