@@ -1,0 +1,10 @@
+let date= "27 06 2025  09:46:55";
+console.log(date);
+let dateObj=new Date();
+console.log(dateObj.getDate(date));
+console.log(dateObj.getDay(date));
+console.log(dateObj.getMonth(date));
+console.log(dateObj.getFullYear(date));
+console.log(dateObj.getHours(date));
+console.log(dateObj.getMinutes(date));
+console.log(dateObj.getSeconds(date));
