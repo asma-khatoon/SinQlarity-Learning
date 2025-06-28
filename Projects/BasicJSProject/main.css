@@ -1,0 +1,113 @@
+.main_div{
+    background-color: blueviolet;
+    width: 400px;
+    height: 800px;
+    margin:auto;
+}
+.top_div{
+    background-color: chocolate;
+    width:100%;
+    height:50%;
+
+
+    
+}
+.bottom_div{
+    background-color: aquamarine;
+    width:100%;
+    height:45%;
+    
+}
+.red_div{
+    background-color: red;
+    width:50%;
+    height:50%;
+    float:left;
+    
+    
+
+}
+.green_div{
+    background-color: green;
+    width:50%;
+    height:50%;
+    float:right;
+}
+.yellow_div{
+    background-color: yellow;
+    width:50%;
+    height:50%;
+    float:left;
+}
+.blue_div{
+    background-color: blue;
+    width:50%;
+    height:50%;
+    float:right;
+}
+.user_input{
+    width:200px;
+    height:60px;
+    margin:auto;
+    padding-top: 20px;
+}
+.add_btn{
+    background-color: chartreuse;
+    width:120px;
+    height:50px;
+    margin:20px;
+    float:left;
+}
+.delete_btn{
+    background-color: brown;
+    margin-top: auto;
+    width:120px;
+    height:50px;
+    margin:20px;
+    float:right;
+}
+.red_btn{
+    background-color: darkgoldenrod;
+    width:120px;
+    height:50px;
+    margin:20px;
+    float:left;
+}
+.green_btn{
+    background-color: darkgoldenrod;
+    width:120px;
+    height:50px;
+    margin:20px;
+    float:right;
+}
+.yellow_btn{
+     background-color: darkgoldenrod;
+     width:120px;
+    height:50px;
+    margin:20px;
+    float:left;
+}
+.blue_btn{
+     background-color: darkgoldenrod;
+     width:120px;
+    height:50px;
+    margin:20px;
+    float:right;
+}
+#red_item{
+    margin: 50px;
+}
+#green_item{
+    margin: 50px;
+}
+#yellow_item{
+    margin: 50px;
+}
+#blue_item{
+    margin: 50px;
+}
+.my_user{
+    color: cornsilk;
+    width: 30px;
+    height: 20px;
+}
