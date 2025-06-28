@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user-registration</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="header"> <h1 style="color: rgb(255, 252, 249);">Registration Form</h1></div>
+    <div class="main">
+ <form id="user_form">
+    
+    <label for ="fname"> First Name</label><br>
+    <input type="text" id="fname" placeholder="Enter your first name" ><br>
+    <label for ="lname"> Last Name</label><br>
+    <input type="text" id="lname" placeholder="Enter your Last name" ><br>
+
+    <label for ="mail"> Email</label><br>
+    <input type="email" id="mail" placeholder="abc@ymail.com" ><br>
+
+    <label for ="contact"> Contact No</label><br>
+    <input type="number" id="contact" placeholder="Enter your mobile No" ><br>
+    
+    <label for ="dob"> Date of Birth</label><br>
+    <input type="date" id="dob" placeholder="Enter your date of Birth" ><br>
+
+    <label for ="age"> Age</label><br>
+    <input type="number" id="age" placeholder="Enter your age" ><br>
+
+    <label for ="gender"> Gender</label><br>
+    <label for ="male"> Male</label>
+    <input type="radio" id="male" name="gender">
+    <label for ="female"> Female</label>
+    <input type="radio" id="female" name ="gender">
+    <label for ="other"> Other</label>
+    <input type="radio" id="other" name ="gender"><br>
+
+    <label for ="resume">Upload Resume</label>
+    <input type="file" id="resume" placeholder="Browse file" required="true"><br><br>
+
+    <input type="submit" id="button" required="false">
+    <input type="reset" id="button"><br>
+    <script src="form.js"> </script>
+
+</div>
+
+
+
+ </form>   
+</body>
+</html>
