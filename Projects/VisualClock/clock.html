@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <title>Visual Clock</title>
+</head>
+<body>
+     
+    <div class="main_div">
+        <div class="container">
+            <div class="clock">
+                <span id="hrs">00</span>
+                <span >:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+
+            </div>
+        
+        </div>
+        
+        <div class="stopwatch">
+                <h1 id="displayTime">00:00:00</h1>
+                <div class="buttons">
+                    <img src="stop.png" id="stopped"  onclick="watchStop()">
+                    <img src="start.jpeg" id="start" onclick="watchStart()">
+                    <img src="reset.png" id="reset" onclick="watchReset()">
+    
+                </div>
+                <h2>Stopwatch</h2>
+            </div>
+            
+            <div class="alarm_container">
+
+            <div id="alarm">
+            
+            <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local"/>
+             <div class="controls">
+               <button  id="setAlarm" onclick="setAlarm()">Set Alarm</button>
+                <button id="clear_Alarm" onclick="clearAlarm()">Clear Alarm</button>
+            </div>
+            </div>
+        
+
+        </div>
+        
+         
+        
+    </div>
+
+
+    <script src="clock.js">  </script>
+    
+</body>
+</html>
