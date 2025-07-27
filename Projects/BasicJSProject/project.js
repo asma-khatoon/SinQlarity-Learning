@@ -1,6 +1,6 @@
 //alert("my new project");
 let my_user=null;
-const red_item = document.getElementById("red_item");
+const red_item = document.getElementById( "red_item" );
 const green_item = document.getElementById("green_item");
 const yellow_item = document.getElementById("yellow_item");
 const blue_item = document.getElementById("blue_item");

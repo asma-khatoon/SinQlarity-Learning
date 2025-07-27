@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <title>Alarm</title>
+</head>
+<body>
+    <div class="main_div">
+         
+     <div class="alarm_container">
+        <!-- <div class="clock">
+                <span id="hrs">00</span>
+                <span >:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+        </div>
+        -->
+        <!-- <input type="datetime-local" id="alarmTime">
+    <button onclick="addAlarm()">Set Alarm</button>
+<button onclick="clearAllAlarms()">Clear All</button> -->
+<!-- <div id="alarmList"></div> -->
+    
+        <div class="input-field"><label for="alarmTime"></label>
+        <input type="datetime-local" id="alarmTime"class="alarm-input" value="" >
+        </div>
+        <div>
+        <button id="setAlarm" onclick="addAlarm()">SET ALARM</button>
+        <button id="clearAlarm" onclick="clearAllAlarms()">CLEAR ALARM</button>
+        </div>
+        <div class="alarms" id="alarms"></div> 
+          
+    </div>
+   <div id="alarmList" class="alarm-list"><ol id="alarmList"></ol>
+
+        </div>
+         <footer><ul>
+            <li><a href="stopwatch.html"><button>Stopwatch</button></a></li>
+            <li><a href="timer.html"><button>Timer</button></a></li>
+            <li><a href="clock.html"><button>Clock</button></a></li>
+        </ul></footer>
+   </div>
+   <script src="alarm.js"></script>
+    
+</body>
+</html>

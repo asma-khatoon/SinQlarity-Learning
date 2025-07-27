@@ -1,109 +1,38 @@
 
+ 
 let hrs = document.getElementById("hrs");
 let min = document.getElementById("min");
 let sec = document.getElementById("sec");
+let am_pm = document.getElementById("am_pm");
+let toggleBtn = document.getElementById("toggle");
+
+let is24HourFormat = false; // default is 12-hour
+
+toggleBtn.addEventListener("click", () => {
+    is24HourFormat = !is24HourFormat;
+    toggleBtn.innerText = is24HourFormat ? "Switch to 12-Hour" : "Switch to 24-Hour";
+});
 
 setInterval(() => {
     let currentTime = new Date();
-    
-    hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : '') + currentTime.getHours();
-    min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : '') + currentTime.getMinutes();
-    sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : '') + currentTime.getSeconds();
+    let hour = currentTime.getHours();
+    let session = "AM";
 
+    if (!is24HourFormat) {
+        if (hour >= 12) {
+            session = "PM";
+            if (hour > 12) hour -= 12;
+        }
+        if (hour === 0) hour = 12;
+
+        am_pm.style.display = "inline";
+        am_pm.innerHTML = session;
+    } else {
+        am_pm.style.display = "none";
+    }
+
+    hrs.innerHTML = (hour < 10 ? "0" : "") + hour;
+    min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+    sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
 
 }, 1000);
-
-//stopwatch
-// const start_stopwatch=document.getElementById('start');
-// const stop_stopwatch=document.getElementById('stopped');
-// const reset_stopwatch=document.getElementById('reset');
-
-// start_stopwatch.addEventListener("click",function(){
-	 
-// if(timer!==null){
-// 	clearInterval(timer)
-// }
-// timer=setInterval(stopwatch, 1000);
-// });
-
-// stop_stopwatch.addEventListener("click",function(){
-// 	clearInterval(timer)
-// });
-
-// reset_stopwatch.addEventListener("click",function(){
-// 	clearInterval(timer)
-// 	stopwatch.innerHTML="00:00:00";
-	
-// });
-
-
-let [seconds, minutes, hours] = [0, 0, 0];
-let displayTime = document.getElementById("displayTime");
-
-let timer = null;
-function stopwatch() {
-    seconds++;
-    if (seconds == 60) {
-        seconds = 0;
-        minutes++;
-        if (minutes == 60) {
-            minutes = 0;
-            hours++;
-        }
-    }
-    let h = hours < 10 ? "0" + hours : hours;
-    let m = minutes < 10 ? "0" + minutes : minutes;
-    let s = seconds < 10 ? "0" + seconds : seconds;
-   displayTime.innerHTML = h + ":" + m + ":" + s;
-   
-
-}
- function watchStart() {
-    if (timer !== null) {
-        clearInterval(timer);
-    }
-    timer = setInterval(stopwatch, 1000);
-}
-function watchStop() {
-    clearInterval(timer);
-}
-function watchReset() {
-    clearInterval(timer);
-    [seconds, minutes, hours] = [0, 0, 0];
-    displayTime.innerHTML = "00:00:00";
-};
-
-// Alarm//
-const display = document.getElementById("alarm");
-const audio = new Audio("bedside-clock-alarm-95792.mp3");
-audio.loop = true;
-let alarmTime = null;
-let alarmTimeout = null;
-function setAlarmTime(value) {
-  alarmTime = value;
-}
-
-function setAlarm() {
-  if (alarmTime) {
-    const current = new Date();
-    const timeToAlarm = new Date(alarmTime);
-
-    if (timeToAlarm > current) {
-      const timeout = timeToAlarm.getTime() - current.getTime();
-      alarmTimeout = setTimeout(function() {
-        audio.play();
-      }, timeout);
-      alert("Alarm set");
-    }
-  }
-}
-
-
-function clearAlarm() {
-  audio.pause();
-  if (alarmTimeout) {
-    clearTimeout(alarmTimeout);
-    alert("Alarm cleared");
-  }
-};
-

@@ -1,4 +1,4 @@
-*{
+/* *{
     margin:0px;
     padding:0px;
     font-family: 'Poppins', sans-serif;
@@ -14,10 +14,11 @@
     position:fixed;
 }
 .container{
-    width:600px;
-    height:180px;
-    position:absolute; 
-    top:22%; 
+    width:700px;
+    height:280px;
+    position:relative;; 
+    display:flex;
+    top:50%; 
     left:50%;
     transform: translate(-50%,-50%);
    
@@ -84,29 +85,43 @@
 #sec::after{
     content:'SECS';
 }
+#toggle{
+    width: 200px;
+    height: 50px;
+    background: white;
+    align-content: center;
+    display:inline-block;
+    text-align: center;
+    position:relative;
+    top:30%;
+    left:40%;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 20px 20px;
+}
 .stopwatch{
     
-    width:25%;
-    max-width:350px;
+    width:600px;
+    height:300px;
     background-position:center;
     text-align: center;
     padding: 40px 0;
     color:#ffff;
-    margin-top: 200px;
+    margin-top: 200px; 
     display:flex;
     flex-direction: column; 
     justify-content: center;
-    position: relative;
-    top:0%;
-    bottom: 5%;
-    left:38%; 
-    box-shadow: 0 10 px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10 px 10px rgba(0, 0, 0, 0.2);  
+    position:absolute;
+    top:10%; 
+    left:50%;
+    transform: translate(-50%,-50%);
     
 
 }
 
 .stopwatch h1{
-    margin-top: 60px;
+    margin: 50px;
     font-size: 64px;
     font-weight: 300;
 }
@@ -115,80 +130,606 @@
     align-items: center;
     justify-content: center;
 }
+
 .buttons img{
     width: 50px;
     margin: 0 20px;
     cursor:pointer;
+    z-index: 1;
 }
 .buttons img:nth-child(2){
     width: 80px;
-}
+} 
+
 .alarm_container{
-    min-height: 100vh;
-    width:80vh;
+    width:30%;
+    height:auto; 
     display:flex;
     flex-direction: column; 
     justify-content: center;
-    position: relative;
-    bottom: 62%;
-    left:38%;
+    position:fixed;
+    top:50%; 
+    left:50%;
+    transform: translate(-50%,-50%);
     
 }
-#alarm{
-    font-size: 15vw;
-    align-items: center; 
-    height: 100px;
-    width: 350px;
-    margin-top:200px;
-    display:flex;    
-    flex-direction: column; 
-    justify-content: center;
-   
+#alarmList_div{ 
+    width:100% ;
+    height:40%;
+    background-color: #fff;
+    display:flex;
+    flex-direction: column;
+    justify-content: center; 
+     position:relative; 
+    /* left:35%; */
+ /* }
 
-}
  input[type="datetime-local"] { 
         border: 2px solid #f0f0f0; 
-        width: 250px; 
-        display: absolute; 
+        margin-top: 50px;
+        width: 400px; 
         font-size: 14px; 
         padding: 10px 15px;  
     
       } 
 
-      .controls {
-        margin-top: 10px;
-      }
+      
 
       #setAlarm {
         
-        height:20vx;
-        width:30vx;
+        height:15vx;
+        width:20vx;
         background-color: green;
         font-weight: bold;
+        margin-left: 30px;;
         border-radius: 5px;
         border: none;
         color: white;
-        padding: 8px 20px;
         cursor: pointer;
         font-size: 15px;
-        display:flex;
-        float:left;
+       
+      }
+      #setAlarm:hover{
+        background-color: #8614a3;
       }
 
-      #clear_Alarm {
-       margin-left: 10px;
-        height:20vx;
-        width:30vx;
+      #clearAlarm {
+        height:15vx;
+        width:20vx;
         background-color: rgb(235, 145, 28);
         font-weight: bold;
         border-radius: 5px;
         border: none;
         color: white;
-        padding: 8px 20px;
         cursor: pointer;
         font-size: 15px;
-        display:flex;
-        float:right;
+        
+      } 
+      #clearAlarm:hover{
+        background-color: #8614a3;
+      } 
+  .alarm-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-height: 200px; /* Scrollable area */
+  /* overflow-y: auto;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.alarm-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 8px 12px;
+  min-width: 60px;
+  max-width: 120px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.alarm-icon {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-right: 5px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: #dc3545;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.delete-btn:hover {
+  color: #a71d2a;
+}
+
+      .timer{
+     height:70%;
+     width:60%;
+    flex-direction: column;  
+    justify-content: center;
+    border-radius: 130px;
+    margin-bottom: 30px; 
+    position:relative;
+    top:70%; 
+    left:60%;
+    transform: translate(-50%,-50%);
 
       }
       
+    .timerbtn{
+    background-color: #0044ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin:40px 20px ; 
+ 
+ 
+} 
+.timerbtn:hover
+{
+    background-color: #8614a3;
+ 
+}
+
+h1{
+    color: white;
+    font-size: 2.5rm;
+    text-align: center;
+    margin-top: 10px;
+ 
+}
+ #hour{
+    height:40px ;
+    width:200px ;
+    border-radius: 10px; 
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: #000000;
+   
+ 
+ 
+}
+#Min{
+    height:40px ;
+    width: 200px;
+    border-radius:10px ; 
+    margin-left:15px ;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: #000000;
+ 
+}
+#Sec{
+    height:40px ;
+    width:200px ;
+    border: black;
+    margin-left:15px ;
+    border-radius:10px ; 
+    text-align: center;
+    font-size:1.5rem ;
+    box-shadow: #000000;
+ 
+   
+}
+ 
+#Disp{
+    font-size:2.0rem ;
+    text-align: center;
+    color: white;
+}
+
+      footer ul{
+    display: flex;
+    height: 10vh;
+    width: 50vw;
+    position:absolute;
+    margin-top: 30px;
+    bottom: 5%;
+    left:25%;
+    justify-content: center;
+    list-style-type: none;
+}
+footer ul li{
+    margin-top: 10px;
+}
+button{
+    width: 150px;
+    height: 50px;
+    background: white;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 20px 20px;
+}
+footer ul li button:active{
+    transform: scale(0.9);
+}
+footer ul li a {
+    text-decoration: none;
+    color: black;
+    
+}  */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.main_div {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #08001f, #30179d);
+  color: #fff;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.container {
+  width: 40%;
+   max-width: 700px;
+  height: 100%;
+  max-height: 700px;
+  padding: 20px;
+  margin: 80px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clock {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 255, 0.11);
+  border-radius: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(40px);
+  padding: 20px;
+}
+
+.container::before,
+.container::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.container::before {
+  width: 80px;
+  height: 80px;
+  background: #e905b7;
+  left: -10px;
+  top: -10px;
+}
+
+.container::after {
+  width: 100px;
+  height: 100px;
+  background: #670385;
+  right: -10px;
+  /* bottom: -10px;   */
+  top: -10px; 
+}
+
+.clock span {
+  font-size: 60px;
+  width: 100px;
+  text-align: center;
+  position: relative;
+}
+
+.clock span::after {
+  font-size: 12px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#hrs::after {
+  content: 'HOURS';
+}
+
+#min::after {
+  content: 'MINS';
+}
+
+#sec::after {
+  content: 'SECS';
+}
+
+#toggle {
+  width: 80%;
+  max-width: 200px;
+  height: 50px;
+  background: white;
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 30px auto;
+  display: block;
+}
+
+/* Stopwatch */
+.stopwatch {
+  width: 90%;
+  max-width: 600px;
+  margin: 60px auto;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  padding: 40px 20px;
+}
+
+.stopwatch h1 {
+ margin-bottom: 10%;
+    font-size: 48px;
+  font-weight: 300;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons img {
+  width: 80px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+/* Alarm */
+.alarm_container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="datetime-local"] {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 15px;
+  border: 2px solid #f0f0f0;
+  margin-top: 20px;
+}
+
+#setAlarm,
+#clearAlarm {
+  height: 45px;
+  width: 100%;
+  max-width: 200px;
+  margin: 15px auto;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#setAlarm {
+  background-color: green;
+}
+
+#clearAlarm {
+  background-color: orange;
+}
+
+#setAlarm:hover,
+#clearAlarm:hover {
+  background-color: #8614a3;
+}
+
+.alarm-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.alarm-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px 12px;
+  min-width: 100px;
+  max-width: 200px;
+  font-size: 1rem;
+}
+
+.alarm-icon {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-right: 5px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: #dc3545;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.delete-btn:hover {
+  color: #a71d2a;
+}
+
+/* Timer */
+.timer {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.timerbtn {
+  background-color: #0044ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.timerbtn:hover {
+  background-color: #8614a3;
+}
+
+#hour, #Min, #Sec {
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+
+#Disp {
+  font-size: 2rem;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  list-style-type: none;
+}
+
+footer ul li button {
+  width: 120px;
+  height: 45px;
+  background: white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+footer ul li button:active {
+  transform: scale(0.95);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .clock span {
+    font-size: 40px;
+    width: 80px;
+  }
+
+  .stopwatch h1 {
+    font-size: 36px;
+  }
+
+  #setAlarm, #clearAlarm {
+    font-size: 14px;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .alarm-item {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .timerbtn {
+    font-size: 0.9rem;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .clock span {
+    font-size: 28px;
+    width: 60px;
+  }
+
+  .stopwatch h1 {
+    font-size: 28px;
+  }
+
+  #hour, #Min, #Sec {
+    width: 60px;
+    font-size: 1rem;
+  }
+
+  .timerbtn {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .alarm-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .alarm-icon {
+    margin-bottom: 5px;
+  }
+
+  footer ul li button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
