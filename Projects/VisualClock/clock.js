@@ -6,7 +6,7 @@ let sec = document.getElementById("sec");
 let am_pm = document.getElementById("am_pm");
 let toggleBtn = document.getElementById("toggle");
 
-let is24HourFormat = false; // default is 12-hour
+let is24HourFormat = false; 
 
 toggleBtn.addEventListener("click", () => {
     is24HourFormat = !is24HourFormat;

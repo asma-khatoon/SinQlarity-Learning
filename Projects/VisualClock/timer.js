@@ -52,7 +52,7 @@ reset.addEventListener('click', () => {
     minute.value = 0;
     second.value = 0;
     display.innerText = "Timer Reset";
-    // total = 0;
+    
 });
  
  

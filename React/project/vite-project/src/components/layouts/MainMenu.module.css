@@ -1,0 +1,72 @@
+.header {
+  background-color: #1f2937; /* Dark background */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #38bdf8; /* Sky blue on hover */
+}
+
+
+.header {
+  background-color: #333;
+  padding: 0.5rem 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  font-size: 1.1rem;
+}
+
+nav ul li a {
+  color:black;
+  font-size:2rem ;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+  border-bottom: 2px solid #00bcd4;
+}
+.fovouriteCount{
+    display: inline-block;
+    width:40px ;
+    height:40px ;
+    border: 1px solid red;
+    color:red ;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 5px;
+}

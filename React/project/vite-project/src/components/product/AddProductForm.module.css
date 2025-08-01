@@ -1,0 +1,66 @@
+.form {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.name,
+.img,
+.price,
+.description
+ {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #222;
+  font-size: 15px;
+}
+
+input[type="text"],
+textarea {
+  padding: 12px 14px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.btn button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn button:hover {
+  background-color: #0056b3;
+}
